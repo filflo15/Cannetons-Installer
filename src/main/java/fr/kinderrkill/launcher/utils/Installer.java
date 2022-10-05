@@ -87,6 +87,11 @@ public class Installer {
             clientDestination.mkdir();
         }
 
+        File clientDestination = new File(versionDirectory, Utils.CLIENT_MODES);
+        if (!clientDestination.exists()) {
+            clientDestination.mkdir();
+        }
+
         filesToDownload.add(new File(clientDestination, Utils.CLIENT_FILE_NAME + ".json"));
         filesToDownload.add(new File(clientDestination, Utils.CLIENT_FILE_NAME + ".jar"));
 
